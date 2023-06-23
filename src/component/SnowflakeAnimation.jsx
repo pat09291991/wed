@@ -45,8 +45,8 @@ const SnowflakeAnimation = ({ circle3 }) => {
 
     return (
         <div id="snowflakes-container" style={{ height: "100vh" }} className='d-flex align-items-center justify-content-center'>
-            <div className="fade-in-image">
-                <img src={circle3} style={{ width: isMobile ? "70%" : "30%" }} />
+            <div>
+                <img src={circle3} style={{ width: isMobile ? "70%" : "30%" }} className='monogram' />
                 {display ?
                     <>
                         <p style={{ fontSize: isMobile ? "1rem" : "3rem" }}>Patrick & Sheryl</p>

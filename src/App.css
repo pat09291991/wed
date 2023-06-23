@@ -7,7 +7,20 @@
 @import url('https://fonts.googleapis.com/css2?family=WindSong&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Petit+Formal+Script&family=WindSong:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,500&display=swap');
+ @import url('https://s3.ap-southeast-1.amazonaws.com/sheryl.patrickllegos.com/assets/Adam-5d9f02cc.otf'); 
 
+
+@font-face {
+  font-family: "Adam";
+  src: url("./assets/fonts/Adam.woff") format("woff");
+  font-weight: bold;
+ }
+
+#root {
+  font-family: "Adam", sans-serif;
+  color: #314c63;
+}
 
 .mainTitle {
   font-family: 'WindSong', cursive;
@@ -134,4 +147,69 @@
 .navbar.scrolled {
   background-color: #2A4054;
   color: #f0f0f0 !important;
+}
+
+@keyframes spin3D {
+  from {
+    transform: rotateY(0deg)
+  }
+
+  to {
+    transform: rotateY(360deg)
+  }
+}
+
+.monogram {
+  animation-name: spin3D;
+  animation-duration: 6s;
+  animation-iteration-count: 1;
+  /* linear | ease | ease-in | ease-out | ease-in-out */
+  animation-timing-function: ease-in-out;
+}
+
+/* .icon.upper g path {
+  stroke-dasharray: 3000;
+  stroke-dashoffset: 3000;
+} */
+
+.icon.upper g path {
+  fill: none;
+  stroke: black;
+  stroke-width: 3;
+  stroke-dasharray: 4000;
+  stroke-dashoffset: 4000;
+  animation: cloud 10s linear alternate infinite;
+}
+
+@keyframes cloud {
+  from {
+    stroke-dashoffset: 4000;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.navSide {
+  position: relative;
+  color: #314c63 !important;
+  text-decoration: none;
+}
+
+.navSide::after {
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #314c63;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.navSide:hover::after {
+  width: 100%;
+  left: 0;
 }

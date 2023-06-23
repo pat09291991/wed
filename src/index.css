@@ -14,6 +14,15 @@
   -webkit-text-size-adjust: 100%;
 } */
 
+/* @font-face {
+  font-family: 'Canela-Regular-Trial';
+  src: url('./assets/fonts/Canela Family/Canela-Regular-Trial.otf') format("otf");
+}
+
+#root {
+  font-family: 'Canela-Regular-Trial', serif !important;
+} */
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
