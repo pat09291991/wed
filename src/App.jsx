@@ -11,7 +11,7 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
-import { Homepage } from './Pages/Home/Homepage';
+import { Home } from './Pages/Home/Home';
 
 function App() {
 
@@ -19,7 +19,7 @@ function App() {
     <Container fluid className='text-center w-100 px-0 mx-0' id="app">
       <Router>
         <Routes>
-          <Route exact path="/" element={<Homepage />} />
+          <Route exact path="/" element={<Home />} />
           {/* <Route element={<PrivateRoutes />}>
             <Route exact path="/" element={<SnowflakeAnimation circle3={Circle3} />} />
             <Route exact path="/the-wedding" element={<Home />} />

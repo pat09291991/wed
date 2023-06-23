@@ -71,7 +71,6 @@ export const Homepage = () => {
                                             </li>
                                         </ul>
                                     </nav>
-                                    
                                 </div>
                             </div>
                             : ""}
