@@ -21,27 +21,14 @@ export const Homepage = () => {
         left: '0px',
     }
 
-    const homePageMobileStyle = {
-        backgroundImage: `url(${BgImage})`,
-        backgroundPosition: 'right',
-        backgroundSize: '100%',
-        opacity: '0.5',
-        zIndex: '0',
-        backgroundRepeat: 'no-repeat',
-        width: '100%',
-        height: '100vh',
-        position: 'absolute',
-        right: '0px',
-        left: '0px',
-    }
 
     return (
         <>
             <Container fluid className="vh-100">
-                <div className="homepage" style={isMobile ? homePageMobileStyle : homePageStyle}></div>
+                <div className="homepage" style={homePageStyle}></div>
                 <Row >
                     <Col style={{ zIndex: '999' }} md="1">
-                        {isDesktop ?
+                        
                             <div className="py-5">
                                 <p className="mb-0">P</p>
                                 <p className="mb-0">/</p>
@@ -73,7 +60,7 @@ export const Homepage = () => {
                                     </nav>
                                 </div>
                             </div>
-                            : ""}
+                         
                     </Col>
                     <Col style={{ zIndex: '999' }} md="10">
                         <div className="position-absolute top-50 start-50 translate-middle">
@@ -84,7 +71,7 @@ export const Homepage = () => {
                     </Col>
 
                     <Col style={{ zIndex: '999' }} md="1">
-                        {isDesktop ?
+                    
                             <div className="d-flex flex-column justify-content-between align-items-center vh-100 py-5">
                                 <div>
                                     <p className="mb-0">12</p>
@@ -93,7 +80,7 @@ export const Homepage = () => {
                                 </div>
                                 <p>scroll down</p>
                             </div>
-                            : ""}
+                           
                     </Col>
                 </Row>
             </Container>

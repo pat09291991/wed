@@ -13,19 +13,18 @@ a {
 
 
 
-.entitled {
+.entitledmobile {
   color: #072a4b;
-  font-size: .6vw;
-  line-height: 1.38889vw;
-  letter-spacing: .02778vw;
+  font-size: 3.09524vw;
+  line-height: 5.95238vw;
+  letter-spacing: .11905vw;
   font-weight: 500;
-  transform: rotateX(90deg)
 }
 
-#footer-top.entitled,
-#h-s1-gallery-btn .entitled,
-#n-br .entitled,
-.nav-link.entitled {
+#footer-top.entitledmobile,
+#h-s1-gallery-btn .entitledmobile,
+#n-br .entitledmobile,
+.nav-linkmobile.entitledmobile {
   transform: none
 }
 
@@ -45,11 +44,7 @@ a {
   transform: scaleX(0);
   transform-origin: 0 50%
 }
-.py-5 {
-  padding-top: 3rem!important;
-  padding-bottom: 3rem!important;
-  font-family: "Adam" , sans-serif !important;
-}
+
 #loader-w {
   position: fixed;
   z-index: 2;
@@ -80,7 +75,7 @@ a {
   color: #072a4b;
 }
 
-.nav-link .nav-light {
+.nav-linkmobile .nav-light {
   top: 0;
   left: 0
 }
@@ -91,19 +86,23 @@ a {
 }
 
 #nav {
-  position: fixed;
-  z-index: 3;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none
+  user-select: none;
 }
-
+#nav {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 .nav-top {
   position: absolute;
   top: 2.77778vw;
@@ -113,17 +112,25 @@ a {
   text-align: center;
   overflow: hidden
 }
-
-#nav-logo-w {
+#nav-logomobile span {
+  display: block;
+}
+#nav-logomobile-w {
   left: 2.77778vw
 }
 
-#nav-logo {
+#nav-logomobile {
   padding: .55556vw 1.11111vw;
   pointer-events: all
 }
-
-#nav-logo span {
+#nav-logomobile {
+  position: absolute;
+  top: 3.80952vw;
+  left: 1.19048vw;
+  padding: 2.38095vw 7.14286vw;
+  pointer-events: all;
+}
+#nav-logomobile span {
   display: block;
   pointer-events: none
 }
@@ -141,41 +148,28 @@ a {
 
 
 
-#nav-link-w {
+
+
+
+
+
+
+
+#nav-linkmobile-w {
   position: absolute;
-  left: 3.38889vw;
-  bottom: 2.66667vw;
-  transform: rotate(-90deg);
-  transform-origin: 0 0
+  top: 3.80952vw;
+  right: 4.28571vw;
 }
-
-#nav-link-w li {
+#nav-linkmobile-w li {
   float: left;
-  overflow: hidden
+  padding: 2.38095vw 3.80952vw;
+}
+.nav-linkmobile {
+  position: re;
+  font-size: 3vw;
 }
 
-#nav-link-w li:first-child {
-  margin: 0 22.6087vh 0 0
-}
 
-#nav-link-w li:nth-child(2),
-#nav-link-w li:nth-child(3) {
-  margin: 0 4.43478vh 0 0
-}
-
-#nav-link-w li:not(:first-child) .nav-link {
-  cursor: pointer;
-  pointer-events: all;
-  transform: translate3d(0, -100%, 0)
-}
-
-.nav-link {
-  position: relative
-}
-
-.nav-link .under {
-  transform: translate3d(-102%, 0, 0)
-}
 
 #nav-prog-w {
   position: absolute;
@@ -188,7 +182,7 @@ a {
 
 #nav-prog {
   background: #c3c2c0;
-  transform: translate3d(0, -100%, 0)
+
 }
 
 
@@ -200,8 +194,7 @@ a {
   right: 0;
   overflow: hidden;
   pointer-events: none;
-  transform: translate3d(-102%, 0, 0);
-  transform: translateZ(0)
+
 }
 
 .footer-credits .under {
@@ -209,7 +202,7 @@ a {
 }
 
 #h-s1-gallery-btn .under,
-.nav-link .under {
+.nav-linkmobile .under {
   bottom: .1vw
 }
 
@@ -219,8 +212,8 @@ a {
 
 #h-s1-gallery-btn .under:after,
 #h-s1-gallery-btn .under:before,
-.nav-link .under:after,
-.nav-link .under:before,
+.nav-linkmobile .under:after,
+.nav-linkmobile .under:before,
 .txt-0 .under:after,
 .txt-0 .under:before {
   border-bottom: 2px solid #072a4b;
@@ -254,7 +247,7 @@ a {
 
 #h-s1-gallery-btn:hover .under:before,
 .footer-credits:hover .under:before,
-.nav-link:hover .under:before,
+.nav-linkmobile:hover .under:before,
 .txt-0:hover .under:before {
   transform: translateX(102%);
   transition: transform 1s cubic-bezier(.23, 1, .32, 1)
@@ -262,8 +255,46 @@ a {
 
 #h-s1-gallery-btn:hover .under:after,
 .footer-credits:hover .under:after,
-.nav-link:hover .under:after,
+.nav-linkmobile:hover .under:after,
 .txt-0:hover .under:after {
   transform: translateX(0);
   transition: transform 1s cubic-bezier(.23, 1, .32, 1) .2s
 }
+
+.shetop{
+  top:30%;
+}
+
+
+
+#nav-date, .page {
+  position: absolute;
+}
+
+#nav-date {
+  top: 192.85714vw;
+  right: 8.09524vw;
+  font-size: 5.71429vw;
+  line-height: 7.14286vw;
+  color: #284135;
+  font-family: c;
+  pointer-events: all;
+  cursor: pointer;
+  font-family: "Adam" , sans-serif !important;
+  /* font-family: "Adam", sans-serif; */
+  color: #314c63;
+}
+
+#nav-linkmobile-w {
+  position: absolute;
+  top: 3.80952vw;
+  right: 4.28571vw;
+}
+.nav-linkmobile {
+  cursor: pointer;
+  display: table;
+  pointer-events: all;
+}
+
+
+
