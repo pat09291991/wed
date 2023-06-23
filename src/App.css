@@ -54,6 +54,7 @@
   height: 100%;
   pointer-events: none;
   z-index: 9999;
+  background-color: #2a4054;
 }
 
 /* CSS styles for the snowflake */
@@ -80,15 +81,14 @@
   }
 }
 
-#snowflakes-container {
+/* #snowflakes-container {
   background-image: url('./assets/images/bg.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 999;
   width: 100%;
-  /* Other styles */
-}
+} */
 
 .fade-in-image,
 .countdown {

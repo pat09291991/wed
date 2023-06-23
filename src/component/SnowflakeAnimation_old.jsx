@@ -2,18 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { isMobile } from 'react-device-detect';
 import { AnimatePresence, motion } from "framer-motion"
-import '../CustomTransition.css'
-import Monogram from '../assets/images/monogram.svg'
-import SvgMonogram from './SvgMonogram'
 
-const SnowflakeAnimation = ({ circle3 }) => {
+const SnowflakeAnimationOld = ({ circle3 }) => {
     const navigate = useNavigate();
 
     useEffect(() => {
         const createSnowflake = () => {
             const snowflake = document.createElement('div');
             snowflake.className = 'snowflake';
-            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.left = Math.random() * 500 + 'vw';
             snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
             snowflake.style.animationDelay = 1 + 's';
             document.getElementById('snowflakes-container').appendChild(snowflake);
@@ -29,19 +26,15 @@ const SnowflakeAnimation = ({ circle3 }) => {
         };
     }, []);
 
-    const [svgHeight, setSvgHeight] = useState(500);
-    const [svgWidth, setSvgWidth] = useState(500);
+    // useEffect(() => {
+    //     const redirectTimeout = setTimeout(() => {
+    //         navigate('/the-wedding')
+    //     }, 6000);
 
-    useEffect(() => {
-        const redirectTimeout = setTimeout(() => {
-            // navigate('/the-wedding')
-        }, 2000);
-
-        return () => {
-            clearTimeout(redirectTimeout);
-        };
-    }, []);
-
+    //     return () => {
+    //         clearTimeout(redirectTimeout);
+    //     };
+    // }, []);
 
     const [display, setDisplay] = useState(false);
     useEffect(() => {
@@ -57,8 +50,16 @@ const SnowflakeAnimation = ({ circle3 }) => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1, y: 0 }}
             >
-                <div id="snowflakes-container" className='w-100 d-flex align-items-center justify-content-center vh-100'>
-                    <SvgMonogram svgHeight={svgHeight} svgWidth={svgWidth} />
+                <div id="snowflakes-container" style={{ height: "100vh" }} className='d-flex align-items-center justify-content-center'>
+                    <div>
+                        <img src={circle3} style={{ width: isMobile ? "70%" : "30%" }} className='monogram' />
+                        {display ?
+                            <>
+                                <p style={{ fontSize: isMobile ? "1rem" : "3rem" }}>Patrick & Sheryl</p>
+                                <p style={{ fontSize: isMobile ? "1rem" : "3rem" }}>12 . 21 . 23</p>
+                            </>
+                            : ""}
+                    </div>
                 </div>
             </motion.div>
         </AnimatePresence>
