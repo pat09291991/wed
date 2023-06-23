@@ -11,32 +11,19 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
-<<<<<<< Updated upstream
 import { Home } from './Pages/Home/Home';
-=======
-import { Homepage } from './Pages/Home/Homepage';
-import { AnimatePresence } from "framer-motion";
-import { LandingPage } from './Pages/Home/LandingPage';
->>>>>>> Stashed changes
+import { AnimatePresence } from 'framer-motion';
 
 function App() {
 
   return (
     <Container fluid className='text-center w-100 px-0 mx-0' id="app">
-<<<<<<< Updated upstream
-      <Router>
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          {/* <Route element={<PrivateRoutes />}>
-=======
       <AnimatePresence>
         <Router>
           <Routes>
-            <Route exact path="/" element={<SnowflakeAnimation />} />
-            <Route exact path="/the-wedding" element={<Homepage />} />
-            <Route exact path="/landing-page" element={<LandingPage />} />
+            <Route exact path="/" element={<Home />} />
             {/* <Route element={<PrivateRoutes />}>
->>>>>>> Stashed changes
+            {/* <Route element={<PrivateRoutes />}>
             <Route exact path="/" element={<SnowflakeAnimation circle3={Circle3} />} />
             <Route exact path="/the-wedding" element={<Home />} />
           </Route> */}
