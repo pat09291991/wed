@@ -34,8 +34,8 @@ const SnowflakeAnimation = ({ circle3 }) => {
 
     useEffect(() => {
         const redirectTimeout = setTimeout(() => {
-            // navigate('/the-wedding')
-        }, 2000);
+            navigate('/the-wedding')
+        }, 6000);
 
         return () => {
             clearTimeout(redirectTimeout);

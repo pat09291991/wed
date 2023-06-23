@@ -1,9 +1,10 @@
-import React from "react"
-import { Col, Container, Row } from "react-bootstrap"
+import React, { useEffect } from "react"
+import { Card, Col, Container, Row } from "react-bootstrap"
 import { isDesktop, isMobile } from "react-device-detect"
 import BgImage from '../../assets/images/bgImage.jpg'
 import PatShe2 from '../../assets/images/patShe2.png'
 import '../../she.css'
+import { Link } from 'react-scroll';
 
 export const Homepage = () => {
     const homePageStyle = {
@@ -22,17 +23,45 @@ export const Homepage = () => {
     }
 
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const elements = document.querySelectorAll('.fade-up');
+
+            elements.forEach((element) => {
+                const elementOffsetTop = element.offsetTop;
+                const windowHeight = window.innerHeight;
+                const scrollY = window.scrollY;
+                console.log(scrollY)
+                if (scrollY + windowHeight > elementOffsetTop + 200) {
+                    element.classList.remove('is-visible');
+                    element.classList.add('is-invisible');
+                }
+
+                if (scrollY < 200) {
+                    element.classList.remove('is-invisible');
+                    element.classList.add('is-visible');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
         <>
             <Container fluid className="vh-100">
-                <div className="homepage" style={homePageStyle}></div>
-                <Row >
-                    <Col style={{ zIndex: '999' }} md="1">
-                        
-                            <div className="py-5">
-                                <p className="mb-0">P</p>
-                                <p className="mb-0">/</p>
-                                <p className="mb-0">S</p>
+                <section id="homepageSection">
+                    <div className="homepage" style={homePageStyle}></div>
+                    <Row >
+                        <Col style={{ zIndex: '999' }} md="1">
+
+                            <div className="d-flex flex-column align-items-center py-5">
+                                <div className="position-fixed">
+                                    <p className="mb-0">P</p>
+                                    <p className="mb-0">/</p>
+                                    <p className="mb-0">S</p>
+                                </div>
                                 <div className="d-flex flex-column align-items-center justify-content-center" style={{ height: "80vh" }}>
                                     <nav id="nav">
                                         <ul id="nav-link-w">
@@ -60,30 +89,51 @@ export const Homepage = () => {
                                     </nav>
                                 </div>
                             </div>
-                         
-                    </Col>
-                    <Col style={{ zIndex: '999' }} md="10">
-                        <div className="position-absolute top-50 start-50 translate-middle">
-                            <img src={PatShe2} style={{ width: '95%', marginBottom: '2rem' }} />
-                            {/* <p className="mb-0 text-start fw-bold" style={{ fontSize: isMobile ? '3rem' : '7rem' }}>Patrick</p>
-                            <p className="mb-0 text-start fw-bold" style={{ fontSize: isMobile ? '3rem' : '7rem', marginTop: !isMobile ? "-3rem" : "" }}>Sheryl</p> */}
-                        </div>
-                    </Col>
-
-                    <Col style={{ zIndex: '999' }} md="1">
-                    
-                            <div className="d-flex flex-column justify-content-between align-items-center vh-100 py-5">
-                                <div>
-                                    <p className="mb-0">12</p>
-                                    <p className="mb-0">/</p>
-                                    <p className="mb-0">21</p>
-                                </div>
-                                <p>scroll down</p>
+                        </Col>
+                        <Col style={{ zIndex: '999' }} md="10">
+                            <div className="position-absolute top-50 start-50 translate-middle">
+                                <img src={PatShe2} style={{ width: '95%', marginBottom: '2rem' }} />
                             </div>
-                           
-                    </Col>
-                </Row>
-            </Container>
+                        </Col>
+
+                        <Col style={{ zIndex: '999' }} md="1">
+                            {isDesktop ?
+                                <div className="d-flex flex-column justify-content-between align-items-center vh-100 py-5">
+                                    <div className="position-fixed">
+                                        <p className="mb-0">12</p>
+                                        <p className="mb-0">/</p>
+                                        <p className="mb-0">21</p>
+                                    </div>
+                                    <div className="position-fixed bottom-0">
+                                        <Link
+                                            to="inviteSection" // Replace 'next-section' with the ID of your target section
+                                            smooth={true} // Enable smooth scrolling
+                                            duration={500} // Set the duration of the scroll animation in milliseconds
+                                            offset={50} // Adjust the offset if needed (positive value moves the scroll position up, negative value moves it down)
+                                        >
+                                            <p className="fade-up" style={{ cursor: "pointer" }}>SCROLL DOWN</p>
+                                        </Link>
+                                    </div>
+                                </div>
+                                : ""}
+                        </Col>
+                    </Row>
+                </section>
+                <section id="inviteSection">
+                    <div className="vh-100 pt-4">
+                        <Row>
+                            <Col md="12" className="d-flex align-items-center justify-content-center">
+                                <Card className="w-25">
+                                    <Card.Body>
+                                        <p className="fw-bolder">The Date</p>
+
+                                    </Card.Body>
+                                </Card>
+                            </Col>
+                        </Row>
+                    </div>
+                </section>
+            </Container >
         </>
     )
 }

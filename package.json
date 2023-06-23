@@ -17,6 +17,8 @@
     "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.2",
+    "react-scroll": "^1.8.9",
+    "react-scrollama": "^2.3.2",
     "yarn": "^1.22.19"
   },
   "devDependencies": {
