@@ -8,17 +8,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Petit+Formal+Script&family=WindSong:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,500&display=swap');
- @import url('https://s3.ap-southeast-1.amazonaws.com/sheryl.patrickllegos.com/assets/Adam-5d9f02cc.otf'); 
+@import url('https://s3.ap-southeast-1.amazonaws.com/sheryl.patrickllegos.com/assets/Adam-5d9f02cc.otf');
 
 
 @font-face {
   font-family: "Adam";
   src: url("./assets/fonts/Adam.woff") format("woff");
   font-weight: bold;
- }
+}
+
+@font-face {
+  font-family: "Montserrat-Light";
+  src: url("./assets/fonts/monteserat/wofftype/Montserrat-Light") format("woff");
+}
+
+.entitled{
+  font-family: "Montserrat-Light" , sans-serif !important;
+}
 
 #root {
-  font-family: "Adam", sans-serif;
+  font-family: "Montserrat-Light" , sans-serif !important;
+  /* font-family: "Adam", sans-serif; */
   color: #314c63;
 }
 
@@ -189,27 +199,4 @@
   to {
     stroke-dashoffset: 0;
   }
-}
-
-.navSide {
-  position: relative;
-  color: #314c63 !important;
-  text-decoration: none;
-}
-
-.navSide::after {
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 2px;
-  left: 50%;
-  position: absolute;
-  background: #314c63;
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  width: 0;
-}
-
-.navSide:hover::after {
-  width: 100%;
-  left: 0;
 }
