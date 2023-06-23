@@ -50,23 +50,23 @@ export const Homepage = () => {
                                     <nav id="nav">
                                         <ul id="nav-link-w">
                                             <li>
-                                                <div class="nav-link entitled"><div class="nav-dark">
+                                                <div className="nav-link entitled"><div className="nav-dark">
                                                     TOKYO BRIDGE, JP</div>
-                                                    <div class="nav-light">TOKYO BRIDGE, JP
+                                                    <div className="nav-light">TOKYO BRIDGE, JP
                                                     </div></div></li>
 
 
-                                            <li><a class="nav-link entitled _tb" href="https://veleyross.app.rsvpify.com"
-                                                style={{ transform: "translate3d(0%, 0px, 0px)" }}>RSVP<span class="under"
+                                            <li><a className="nav-link entitled _tb" href="https://veleyross.app.rsvpify.com"
+                                                style={{ transform: "translate3d(0%, 0px, 0px)" }}>RSVP<span className="under"
                                                     style={{ transform: "translate3d(0px, 0%, 0px)" }} ></span></a></li>
 
 
 
-                                            <li><a class="nav-link entitled _tb" href="https://www.honeyfund.com/wedding/veleyrosswedding"
-                                                style={{ transform: "translate3d(0%, 0px, 0px)" }}>FAQ<span class="under"
+                                            <li><a className="nav-link entitled _tb" href="https://www.honeyfund.com/wedding/veleyrosswedding"
+                                                style={{ transform: "translate3d(0%, 0px, 0px)" }}>FAQ<span className="under"
                                                     style={{ transform: "translate3d(0px, 0%, 0px)" }} ></span></a></li>
                                             <li>
-                                                <div class="nav-link entitled" style={{ transform: "translate3d(0px, 0%, 0px)" }} >GALLERY<span class="under"
+                                                <div className="nav-link entitled" style={{ transform: "translate3d(0px, 0%, 0px)" }} >GALLERY<span className="under"
                                                     style={{ transform: "translate3d(0%, 0px, 0px)" }}></span></div>
                                             </li>
                                         </ul>
