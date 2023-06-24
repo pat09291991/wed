@@ -1,40 +1,38 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { isMobile } from 'react-device-detect';
 import { AnimatePresence, motion } from "framer-motion"
 import '../CustomTransition.css'
-import Monogram from '../assets/images/monogram.svg'
 import SvgMonogram from './SvgMonogram'
 
-const SnowflakeAnimation = ({ circle3 }) => {
-    const navigate = useNavigate();
-
+const SnowflakeAnimation = ({ setLoading, loading }) => {
     useEffect(() => {
-        const createSnowflake = () => {
-            const snowflake = document.createElement('div');
-            snowflake.className = 'snowflake';
-            snowflake.style.left = Math.random() * 100 + 'vw';
-            snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
-            snowflake.style.animationDelay = 1 + 's';
-            document.getElementById('snowflakes-container').appendChild(snowflake);
-            snowflake.addEventListener('animationend', function () {
-                snowflake.remove();
-            });
-        };
+        if (loading) {
+            const createSnowflake = () => {
+                const snowflake = document.createElement('div');
+                snowflake.className = 'snowflake';
+                snowflake.style.left = Math.random() * 100 + 'vw';
+                snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+                snowflake.style.animationDelay = 1 + 's';
+                document.getElementById('snowflakes-container').appendChild(snowflake);
+                snowflake.addEventListener('animationend', function () {
+                    snowflake.remove();
+                });
+            };
 
-        const snowflakeInterval = setInterval(createSnowflake, 200);
+            const snowflakeInterval = setInterval(createSnowflake, 200);
 
-        return () => {
-            clearInterval(snowflakeInterval);
-        };
-    }, []);
+            return () => {
+                clearInterval(snowflakeInterval);
+            };
+        }
+    }, [loading]);
 
     const [svgHeight, setSvgHeight] = useState(500);
     const [svgWidth, setSvgWidth] = useState(500);
 
     useEffect(() => {
+        setLoading(true)
         const redirectTimeout = setTimeout(() => {
-            navigate('/the-wedding')
+            setLoading(false)
         }, 6000);
 
         return () => {

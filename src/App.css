@@ -217,3 +217,76 @@
   transform: translateY(0);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
+.animate-up {
+  transition: transform 1s ease;
+}
+
+.animate-up.move-up {
+  transform: translateY(-100vh);
+  /* Adjust the distance as needed */
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-down:hover {
+  background-color: #f0f0f0;
+}
+
+.arrow {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  animation: scrollDownAnimation 1s infinite;
+}
+
+@keyframes scrollDownAnimation {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  50% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

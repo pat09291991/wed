@@ -21,8 +21,7 @@ function App() {
       <AnimatePresence>
         <Router>
           <Routes>
-            <Route exact path="/" element={<SnowflakeAnimation />} />
-            <Route exact path="/the-wedding" element={<Home />} />
+            <Route exact path="/" element={<Home />} />
             {/* <Route element={<PrivateRoutes />}>
             {/* <Route element={<PrivateRoutes />}>
             <Route exact path="/" element={<SnowflakeAnimation circle3={Circle3} />} />
