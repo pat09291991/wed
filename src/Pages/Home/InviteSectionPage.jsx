@@ -38,7 +38,7 @@ export const InviteSectionPage = () => {
                     </span><span>He asked her to marry him.</span></li>
                 <li id="h-s1-caption-2" className="txt-2" style={{ transform: 'translate3d(0px, 58.7136px, 0px)' }} >
                     <span>5:50PM</span><span>She said yes.</span></li>
-                <li id="h-s1-caption-3" className="txt-2"><span>Oct 14, 2019</span><span>We get married.</span></li>
+                <li id="h-s1-caption-3" className="txt-2"><span>Dec 21, 2023</span><span>We will get married.</span></li>
             </ul>
         </div>
     )
