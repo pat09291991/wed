@@ -20,7 +20,7 @@ export const InviteSectionPage = () => {
                 </div>
                 <div className="line" style={{ transform: 'scaleX(1)' }} ></div>
                 <p className="txt-1" style={{ transform: 'translate3d(0px, 0%, 0px); opacity: 1' }} >Please join us as we exchange our sacred vows and solemnly pronounce our commitment by saying 'I do'.</p><a className="txt-0 _tb"
-                    href="https://veleyross.app.rsvpify.com" style={{ transform: 'translate3d(0px, 0%, 0px); opacity: 1' }} >RSVP<span
+                    href="" style={{ transform: 'translate3d(0px, 0%, 0px); opacity: 1' }} >RSVP<span
                         className="under"></span></a>
             </div>
             <ul>
