@@ -97,13 +97,13 @@ export const Homepage = () => {
                                                     </div></div></li>
 
 
-                                            <li><a className="nav-link entitled _tb" href="https://veleyross.app.rsvpify.com"
+                                            <li><a className="nav-link entitled _tb" href=""
                                                 style={{ transform: "translate3d(0%, 0px, 0px)" }}>RSVP<span className="under"
                                                     style={{ transform: "translate3d(0px, 0%, 0px)" }} ></span></a></li>
 
 
 
-                                            <li><a className="nav-link entitled _tb" href="https://www.honeyfund.com/wedding/veleyrosswedding"
+                                            <li><a className="nav-link entitled _tb" href=""
                                                 style={{ transform: "translate3d(0%, 0px, 0px)" }}>FAQ<span className="under"
                                                     style={{ transform: "translate3d(0px, 0%, 0px)" }} ></span></a></li>
                                             <li>
