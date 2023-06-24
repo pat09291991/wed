@@ -26,8 +26,8 @@ const SnowflakeAnimation = ({ setLoading, loading }) => {
         }
     }, [loading]);
 
-    const [svgHeight, setSvgHeight] = useState(500);
-    const [svgWidth, setSvgWidth] = useState(500);
+    const svgHeight = 500;
+    const svgWidth = 500;
 
     useEffect(() => {
         setLoading(true)
@@ -41,13 +41,6 @@ const SnowflakeAnimation = ({ setLoading, loading }) => {
     }, []);
 
 
-    const [display, setDisplay] = useState(false);
-    useEffect(() => {
-        setTimeout(() => {
-            setDisplay(true)
-        }, 0)
-    }, [])
-
     return (
         <AnimatePresence>
             <motion.div
@@ -55,8 +48,8 @@ const SnowflakeAnimation = ({ setLoading, loading }) => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1, y: 0 }}
             >
-                <div id="snowflakes-container" className='w-100 d-flex align-items-center justify-content-center vh-100'>
-                    <SvgMonogram svgHeight={svgHeight} svgWidth={svgWidth} />
+                <div id="snowflakes-container" className='d-flex align-items-center justify-content-center px-0 mx-0 w-100 vh-100'>
+                    {loading ? <SvgMonogram svgHeight={svgHeight} svgWidth={svgWidth} /> : ""}
                 </div>
             </motion.div>
         </AnimatePresence>
