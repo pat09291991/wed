@@ -109,7 +109,7 @@ a {
   top: 2.77778vw;
   font-size: .83333vw;
   line-height: 1.38889vw;
-  font-family: c;
+   font-family: "Adam";
   text-align: center;
   overflow: hidden
 }
@@ -367,7 +367,7 @@ a {
                 top: 2.77778vw;
                 font-size: .83333vw;
                 line-height: 1.38889vw;
-                font-family: c;
+                 font-family: "Adam";
                 text-align: center;
                 overflow: hidden
             }
@@ -657,7 +657,7 @@ a {
 
             .nav-caption-0 {
                 color: #f3f2f1;
-                font-family: c;
+                 font-family: "Adam";
                 font-size: 2.22222vw;
                 line-height: 2.55556vw;
                 letter-spacing: -.08333vw
@@ -699,8 +699,8 @@ a {
             .title-0,.title-1 {
                 position: relative;
                 transform: translateZ(0);
-                color: #284135;
-                font-family: c
+                color: #314c63;
+                font-family: "montserrat-Light", sans-serif;
             }
 
             .title-1 {
@@ -725,11 +725,11 @@ a {
 
             .txt-0 {
                 margin: 1.27778vw 0 0;
-                color: #284135;
+                color: #314c63;
                 font-size: 1.33333vw;
                 line-height: 2.22222vw;
                 letter-spacing: -.02778vw;
-                opacity: 0
+             
             }
 
             .txt-1 {
@@ -742,7 +742,8 @@ a {
             .txt-1,.txt-2 {
                 color: #999790;
                 letter-spacing: -.01389vw;
-                opacity: 0
+                font-family: 'Adam';
+           
             }
 
             .txt-2 {
@@ -941,7 +942,7 @@ a {
 
             .h-s1-no {
                 position: absolute;
-                font-family: c;
+                 font-family: "Adam";
                 font-weight: 700;
                 font-size: 22.22222vw;
                 line-height: 22.22222vw;
@@ -958,7 +959,7 @@ a {
             }
 
             #h-s1-no-1 {
-                top: 115.94444vw;
+                top: 95.94444vw;
                 right: 8.83333vw
             }
 
@@ -981,7 +982,7 @@ a {
             }
 
             #h-s1-caption-0 {
-                top: 140.11111vw;
+                top: 105.11111vw;
                 left: 41.66667vw
             }
 
@@ -1167,3 +1168,4 @@ a {
                     width:83.33333vw
                 }
             }
+      

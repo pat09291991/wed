@@ -3,6 +3,7 @@ import { Card, Col, Container, Row } from "react-bootstrap"
 import { isDesktop, isMobile } from "react-device-detect"
 import BgImage from '../../assets/images/bgImage.jpg'
 import PatShe2 from '../../assets/images/patShe2.png'
+
 import '../../she.css'
 import { Link } from 'react-scroll';
 import SnowflakeAnimation from "../../component/SnowflakeAnimation"
