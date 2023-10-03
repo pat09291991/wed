@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from "framer-motion"
 import '../CustomTransition.css'
 import SvgMonogram from './SvgMonogram'
+import BgImage from '../assets/images/bgImage.jpg'
 
-const SnowflakeAnimation = ({ setLoading, loading }) => {
+const SnowflakeAnimation = ({ setLoading, loading, setHomePageStyle, homePageStyle }) => {
     useEffect(() => {
         if (loading) {
             const createSnowflake = () => {
@@ -23,6 +24,21 @@ const SnowflakeAnimation = ({ setLoading, loading }) => {
             return () => {
                 clearInterval(snowflakeInterval);
             };
+        } else {
+            let snowflake = document.getElementById("snowflakes-container");
+            snowflake.classList.add("move-up");
+            snowflake.classList.add("w-100");
+            setTimeout(() => {
+                let homePage = document.getElementById("homePage");
+                homePage.classList.add("fade-in-image");
+                setHomePageStyle({ ...homePageStyle, backgroundImage: `url(${BgImage})` })
+            }, 100)
+            setTimeout(() => {
+                let mainTitle = document.getElementById("mainTitle");
+                mainTitle.classList.add("fade-in");
+                let snowflake = document.getElementById("snowflakes-container");
+                snowflake.style.height = '0';
+            }, 1000)
         }
     }, [loading]);
 
@@ -30,9 +46,8 @@ const SnowflakeAnimation = ({ setLoading, loading }) => {
     const svgWidth = 500;
 
     useEffect(() => {
-        setLoading(true)
         const redirectTimeout = setTimeout(() => {
-            setLoading(false)
+            setLoading(!loading)
         }, 6000);
 
         return () => {
@@ -48,7 +63,7 @@ const SnowflakeAnimation = ({ setLoading, loading }) => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1, y: 0 }}
             >
-                <div id="snowflakes-container" className='d-flex align-items-center justify-content-center px-0 mx-0 w-100 vh-100'>
+                <div id="snowflakes-container" className='animate-up d-flex align-items-center justify-content-center px-0 mx-0 w-100 vh-100'>
                     {loading ? <SvgMonogram svgHeight={svgHeight} svgWidth={svgWidth} /> : ""}
                 </div>
             </motion.div>

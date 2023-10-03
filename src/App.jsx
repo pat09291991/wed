@@ -13,6 +13,7 @@ import {
 } from "react-router-dom";
 import { Home } from './Pages/Home/Home';
 import { AnimatePresence } from 'framer-motion';
+import { Rsvp } from './Pages/RSVP/rsvp';
 
 function App() {
 
